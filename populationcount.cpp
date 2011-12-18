@@ -123,7 +123,7 @@ inline int popcnt_byte(register uint32_t u)
 // gcc-4.6.1 // gcc-4.6.1 (x64) // msvc10 (x86) // msvc10 (x64)
 // 50.1 secs // 13.1 secs // 36.1 secs // 14.9 secs // popcnt64
 // 12.3 secs // 12.8 secs // 13.4 secs // 12.6 secs // popcnt
-// 38.6 secs // 21.3 secs // 19.2 secs // 43.8 secs // popcnt64_nibble
+// 38.6 secs // 21.3 secs // 43.8 secs // 19.2 secs // popcnt64_nibble
 // 18.1 secs // 21.3 secs // 24.1 secs // 19.2 secs // popcnt_nibble
 // 19.1 secs // 12.5 secs // 21.2 secs // 11.28 secs // popcnt64_byte
 // 8.42 secs // 12.7 secs // 12.3 secs // 12.2 secs // popcnt_byte
