@@ -116,16 +116,17 @@ inline int popcnt_byte(register uint32_t u)
 // data are median of three repeats rounded to three significant figures
 
 // gcc-4.6.1 // __builtin_popcount 2.13 secs // __builtin_popcountll 50.1 secs
+// gcc-4.6.1 (x64) // __builtin_popcount 2.08 secs // __builtin_popcountll 2.09 secs
 // msvc10 (x86) // __popcnt 3.25 secs // __popcnt64 error
 // msvc10 (x64) // __popcnt 2.08 secs // __popcnt64 2.04 secs
 
-// gcc-4.6.1 // msvc10 (x86) // msvc10 (x64)
-// 50.1 secs // 36.1 secs // 14.9 secs // popcnt64
-// 12.3 secs // 13.4 secs // 12.6 secs // popcnt
-// 38.6 secs // 19.2 secs // 43.8 secs // popcnt64_nibble
-// 18.1 secs // 24.1 secs // 19.2 secs // popcnt_nibble
-// 19.1 secs // 21.2 secs // 11.28 secs // popcnt64_byte
-// 8.42 secs // 12.3 secs // 12.2 secs // popcnt_byte
+// gcc-4.6.1 // gcc-4.6.1 (x64) // msvc10 (x86) // msvc10 (x64)
+// 50.1 secs // 13.1 secs // 36.1 secs // 14.9 secs // popcnt64
+// 12.3 secs // 12.8 secs // 13.4 secs // 12.6 secs // popcnt
+// 38.6 secs // 21.3 secs // 19.2 secs // 43.8 secs // popcnt64_nibble
+// 18.1 secs // 21.3 secs // 24.1 secs // 19.2 secs // popcnt_nibble
+// 19.1 secs // 12.5 secs // 21.2 secs // 11.28 secs // popcnt64_byte
+// 8.42 secs // 12.7 secs // 12.3 secs // 12.2 secs // popcnt_byte
 
 inline void test()
 {
